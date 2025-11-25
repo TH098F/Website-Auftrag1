@@ -13,17 +13,17 @@ export const serviceList: Service[] = [
     {
         name: "Telefonische Erstberatung",
         description: "<p>Ca. 20 Minuten</p> <p>Kostenfrei</p>",
-        image: "/telefon.jpeg"
+        image: "telefon.jpeg"
     },
     {
         name: "Persönliches Coaching/Beratung",
         description: await coachingServiceText.compiledContent(),
-        image: "/raum1.jpeg"
+        image: "raum1.jpeg"
     },
     {
         name: "Teamcoaching Tagesworkshop",
         description: await teamCoachingServiceText.compiledContent(),
-        image: "/hands1.png"
+        image: "hands1.png"
     }
 ];
 

@@ -11,7 +11,7 @@ import { cssVars, serviceList } from "../../config/contentConfig";
         {serviceList.map((service) => (
             <div class="serviceItem">
                 <div class="image">
-                    <img src={service.image}/>
+                    <img src={"/" + config.base + "/" + service.image}/>
                 </div>
                 <div class="text">
                     <h2 class="title">{service.name}</h2>

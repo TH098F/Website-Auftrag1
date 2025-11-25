@@ -2,6 +2,7 @@
 import Layout from "../layouts/layout.astro";
 import Header from "../components/header.astro";
 import { cssVars } from "../../config/contentConfig";
+import config from "../../config/baseConfig";
 ---
 
 <Layout title="Test">
@@ -14,7 +15,7 @@ import { cssVars } from "../../config/contentConfig";
             <h1 id="name">Maike Wenske</h1>
             <p>- zertifizierte Coachin -</p>
             <br>
-            <img src="/maike.jpeg">
+            <img src={"/" + config.base + "/maike.jpeg"}>
             <p id="quote">"Leben ist das, was passiert, während du eifrig dabei bist, andere Pläne zu machen." (John Lennon)</p>
         </div>
     </main>
