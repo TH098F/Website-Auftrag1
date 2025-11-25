@@ -1,5 +1,5 @@
 import { defineConfig } from 'astro/config';
-import config from './config/config';
+import config from './config/baseConfig';
 
 // https://astro.build/config
 export default defineConfig({

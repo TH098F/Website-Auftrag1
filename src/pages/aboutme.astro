@@ -1,0 +1,50 @@
+---
+import Layout from "../layouts/layout.astro";
+import Header from "../components/header.astro"
+---
+<Layout title="Über Mich">
+    <Header/>
+    <br>
+    <main>
+        <div class="about">
+            <h1 class="name">Maike Wenske</h1>
+            <img src={"maike2.jpeg"}>
+            <div class="info">
+                <p>geboren in Neuruppin, Brandenburg, seit zwei Jahren in Elstal, 10 Jahre in Berlin gelebt und gearbeitet, examinierte Gesundheits- und Krankenpflegerin, seit 2014 in der Kinderintensivpflege tätig, Mutter einer jugendlichen Tochter. Seit 2020 ausgebildete Life Coachin und psychologische Beraterin mit Leidenschaft und Freude.</p>
+                <p>Ausbildung zum Life Coach und psychologischen Beraterin: Institut für Lernsysteme Hamburg</p>
+                <br>
+                <p>Worauf sich meine Arbeit stützt:</p>
+                <ul>
+                    <li>Fernkurse nach Dr. Björn Migge</li>
+                    <li>Stefanie Stahl: "Das Kind in mir muss Heimat finden" "Jeder ist beziehungsfähig"</li>
+                    <li>Robert Betz: "Ohne deine Vergangenheit bist du sofort frei" ,"Frieden mit meinen Arschengeln"</li>
+                    <li>Tobias Beck: Präsenzseminar: Masterclass of Personality</li>
+                    <li>Dale Carnegie: "Sorge dich nicht-lebe! Die Kunst, zu einem von Ängsten und  Aufregungen befreiten Leben zu finden"</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+</Layout>
+<style>
+    main {
+        margin: auto;
+        width: 800px;
+        max-width: calc(100% - 2rem);
+    }
+    .about {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 2rem;
+    }
+    .about .name {
+        font-size: 3rem;
+        font-weight: 600;
+    }
+    .about .info {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+</style>

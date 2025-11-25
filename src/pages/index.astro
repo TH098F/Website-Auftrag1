@@ -1,12 +1,66 @@
 ---
 import Layout from "../layouts/layout.astro";
 import Header from "../components/header.astro";
+import config from "../../config/baseConfig";
+import { cssVars } from "../../config/contentConfig";
 ---
 
 <Layout title="Test">
     <Header />
     <br>
     <main>
-        
+        <div class="hello">
+            <p id="greeting">Herzlich Willkommen</p>
+            <p id="I-am">Ich bin</p>
+            <h1 id="name">Maike Wenske</h1>
+            <p>- zertifizierte Coachin -</p>
+            <br>
+            <img src={config.base + "/maike.jpeg"}>
+            <p id="quote">"Leben ist das, was passiert, während du eifrig dabei bist, andere Pläne zu machen." (John Lennon)</p>
+        </div>
     </main>
 </Layout>
+<style define:vars={cssVars}>
+    :root {
+        scroll-behavior: smooth;
+    }
+    main {
+		margin: auto;
+		padding: 0.5rem;
+		width: 800px;
+		max-width: calc(100% - 2rem);
+		color: white;
+		font-size: 20px;
+		line-height: 1;
+	}
+    .hello {
+        font-size: 2rem;
+		text-align: center;
+		font-weight: 200;
+        line-height: 1;
+        color: #000
+    }
+    .hello #greeting {
+        line-height: 1;
+        font-size: 2.5rem;
+    }
+    .hello #I-am {
+        margin-bottom: 0;
+    }
+    .hello #name {
+        line-height: 0.5;
+    }
+
+    .hello img {
+        display: block;
+        align-items: center;
+        justify-items: center;
+        margin: 0rem;
+        width: 100%;
+    }
+
+    .hello #quote {
+        color: var(--accentColor);
+        font-weight: 500;
+    }
+</style>

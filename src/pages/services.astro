@@ -1,0 +1,74 @@
+---
+import Layout from "../layouts/layout.astro";
+import Header from "../components/header.astro"
+import config from "../../config/baseConfig";
+import { cssVars, serviceList } from "../../config/contentConfig";
+---
+
+<Layout title="Meine Leistungen">
+    <Header/>
+    <div class="servicesContainer">
+        {serviceList.map((service) => (
+            <div class="serviceItem">
+                <div class="image">
+                    <img src={service.image}/>
+                </div>
+                <div class="text">
+                    <h2 class="title">{service.name}</h2>
+                    <div class="desc"><Fragment set:html={service.description}/></div>
+                </div>
+            </div>
+        ))}
+    </div>
+</Layout>
+<style define:vars={cssVars}>
+    main {
+        margin: auto;
+        width: 800px;
+        max-width: calc(100% - 2rem);
+    }
+    .servicesContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-items: center;
+        padding-top: 4rem;
+        width: 800px;
+        margin: auto;
+    }
+    .servicesContainer .serviceItem {
+        border: 10px;
+        border-radius: 30px;
+        border-color: black;
+        background-color: var(--baseDarkColor);
+        padding: 1rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        height: fit-content;
+        width: 100%;
+        margin: 1rem;
+    }
+    .servicesContainer .serviceItem .image {
+        width: 50%;
+    }
+    .servicesContainer .serviceItem .image img {
+        border: 10px;
+        border-radius: 20px;
+        display: block;
+        max-height: 100%;
+        max-width: 100%;
+    }
+    .servicesContainer .serviceItem .text {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        padding-left: 1rem;
+        font-weight: 550;
+        width: 50%;
+    }
+    .servicesContainer .serviceItem .text h2 {
+        font-weight: 1000;
+        margin: 0;
+    }
+</style>

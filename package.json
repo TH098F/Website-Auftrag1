@@ -1,4 +1,15 @@
 {
+  "name": "website",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "test-pub": "astro preview --host"
+  },
   "dependencies": {
     "astro": "^5.15.7"
   }

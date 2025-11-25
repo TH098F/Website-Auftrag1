@@ -1,0 +1,52 @@
+---
+import Layout from "../layouts/layout.astro";
+import Header from "../components/header.astro"
+import { cssVars } from "../../config/contentConfig";
+---
+
+<Layout title="Kontakt">
+    <Header/>
+    <div class="contact">
+        <p>Du möchtest mehr erfahren, hast fragen, möchtest einen Termin oder wünscht ein erstes völlig unverbindliches Gespräch?</p>
+        <p>Dann kontaktiere mich gern:</p>
+        <div class="address">
+            <p>Maike Wenske</p>
+            <p>Zwergensteig 4</p>
+            <p>14641 Wustermark</p>
+        </div>
+        <ul>
+            <li>Telefon: 0 176 72877190 (auch via WhatsApp oder Signal)</li>
+            <li>E-Mail: coaching-wenske@outlook.de</li>
+            <li>Instagram: maike.wenske.coaching</li>
+        </ul>
+    </div>
+</Layout>
+<style define:vars={cssVars}>
+    .contact {
+        margin: auto;
+        margin-top: 4.5rem;
+        width: 800px;
+        max-width: calc(100% - 2rem);
+        background-color: var(--baseDarkColor);
+        border: 10px;
+        border-radius: 30px;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+    .contact p {
+        font-weight: 600;
+    }
+    .contact .address {
+        margin-left: 2rem;
+    }
+    .contact .address p {
+        font-weight: 500;
+        margin: 0;
+    }
+    .contact ul li {
+        font-weight: 500;
+        margin: 0.5rem;
+    }
+</style>
