@@ -1,5 +1,5 @@
 const config = {
-    base: "test",
+    base: "Website-Auftrag1",
 
     colors: {
         base: "#f6d4c0",
