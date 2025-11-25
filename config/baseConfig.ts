@@ -1,4 +1,5 @@
 const config = {
+    url: "https://th098f.github.io",
     base: "Website-Auftrag1",
 
     colors: {
