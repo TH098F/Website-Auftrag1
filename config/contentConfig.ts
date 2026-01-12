@@ -1,7 +1,9 @@
 import config from "./baseConfig";
 
 import * as coachingServiceText from "./coachingService.md";
-import * as teamCoachingServiceText from "./teamCoachingService.md";
+import * as hypnoseService from "./hypnoseService.md";
+import * as aboutMeText from "./aboutme.md";
+import * as hynoseText from "./hypnoseInfo.md"
 
 interface Service {
     name: string,
@@ -21,11 +23,14 @@ export const serviceList: Service[] = [
         image: "raum1.jpeg"
     },
     {
-        name: "Teamcoaching Tagesworkshop",
-        description: await teamCoachingServiceText.compiledContent(),
-        image: "hands1.png"
+        name: "Hypnose",
+        description: await hypnoseService.compiledContent() + `<a style="color:black;" href=${"/" + config.base + "/hypnose"}>Mehr Informationen zu Hypnose findest du hier</a>`,
+        image: "hypnose1.jpeg"
     }
 ];
+
+export const aboutMe = await aboutMeText.compiledContent();
+export const hypnose = await hynoseText.compiledContent();
 
 export const cssVars = {
     baseColor: config.colors.base,

@@ -1,18 +1,18 @@
 ---
 import Layout from "../layouts/layout.astro";
 import Header from "../components/header.astro"
-import config from "../../config/baseConfig";
-import { aboutMe } from "../../config/contentConfig"
+// import config from "../../config/baseConfig";
+import { hypnose } from "../../config/contentConfig"
 ---
-<Layout title="Über Mich">
+<Layout title="Hypnose">
     <Header/>
     <br>
     <main>
         <div class="about">
-            <h1 class="name">Maike Wenske</h1>
-            <img src={"/" + config.base + "/maike2.jpeg"}>
+            <h1 class="title">Hypnose</h1>
+            <!-- <img src={"/" + config.base + "/maike2.jpeg"}> -->
             <div class="info">
-                <Fragment set:html={aboutMe}/>
+                <Fragment set:html={hypnose}/>
             </div>
         </div>
     </main>
@@ -25,7 +25,7 @@ import { aboutMe } from "../../config/contentConfig"
         justify-content: center;
         margin-top: 2rem;
     }
-    .about .name {
+    .about .title {
         font-size: 3rem;
         font-weight: 600;
     }

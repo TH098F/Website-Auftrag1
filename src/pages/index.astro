@@ -7,7 +7,6 @@ import config from "../../config/baseConfig";
 
 <Layout title="Test">
     <Header />
-    <br>
     <main>
         <div class="hello">
             <p id="greeting">Herzlich Willkommen</p>
@@ -21,24 +20,11 @@ import config from "../../config/baseConfig";
     </main>
 </Layout>
 <style define:vars={cssVars}>
-    :root {
-        scroll-behavior: smooth;
-    }
-    main {
-		margin: auto;
-		padding: 0.5rem;
-		width: 800px;
-		max-width: calc(100% - 2rem);
-		color: white;
-		font-size: 20px;
-		line-height: 1;
-	}
     .hello {
         font-size: 2rem;
 		text-align: center;
 		font-weight: 200;
         line-height: 1;
-        color: #000
     }
     .hello #greeting {
         line-height: 1;
@@ -48,7 +34,7 @@ import config from "../../config/baseConfig";
         margin-bottom: 0;
     }
     .hello #name {
-        line-height: 0.5;
+        line-height: 1;
     }
 
     .hello img {

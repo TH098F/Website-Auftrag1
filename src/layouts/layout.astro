@@ -10,7 +10,7 @@ const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="de">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content={title} />
@@ -36,6 +36,12 @@ const { title } = Astro.props;
 	html {
 		background: var(--baseColor);
 	}
+	hr {
+		color: black;
+		background: black;
+		width: 100%;
+		height: auto;
+	}
 	code {
 		font-family:
 			Menlo,
@@ -46,5 +52,14 @@ const { title } = Astro.props;
 			Bitstream Vera Sans Mono,
 			Courier New,
 			monospace;
+	}
+	:root {
+        scroll-behavior: smooth;
+    }
+    main {
+		margin: auto;
+		padding: 0.5rem;
+		width: min(800px, 100% - 2rem);
+		color: black;
 	}
 </style>

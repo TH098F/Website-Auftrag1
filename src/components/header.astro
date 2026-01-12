@@ -6,6 +6,7 @@ import { cssVars } from "../../config/contentConfig";
     <nav class="left">
         <a href={"/" + config.base}>Home</a>
         <a href={"/" + config.base + "/aboutme"}>Über Mich</a>
+        <a href={"/" + config.base + "/hypnose"}>Hypnose</a>
     </nav>
     <nav class="right">
         <a href={"/" + config.base + "/services"}>Leistungen</a>
@@ -24,8 +25,8 @@ import { cssVars } from "../../config/contentConfig";
         color: white;
         display: flex;
         flex-direction: row;
-        position: fixed;
-        top: 0;
+        position: sticky;
+        top: 10px;
         left: 0;
         right: 0;
         z-index: 99;
@@ -33,6 +34,7 @@ import { cssVars } from "../../config/contentConfig";
         align-items: center;
         justify-content: space-between;
         font-weight: 700;
+        border-radius: 15px;
     }
 
     .nav nav {

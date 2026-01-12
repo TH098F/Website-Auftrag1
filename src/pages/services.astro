@@ -7,33 +7,30 @@ import { cssVars, serviceList } from "../../config/contentConfig";
 
 <Layout title="Meine Leistungen">
     <Header/>
-    <div class="servicesContainer">
-        {serviceList.map((service) => (
-            <div class="serviceItem">
-                <div class="image">
-                    <img src={"/" + config.base + "/" + service.image}/>
+    <main>
+        <div class="servicesContainer">
+            {serviceList.map((service) => (
+                <div class="serviceItem">
+                    <div class="image">
+                        <img src={"/" + config.base + "/" + service.image}/>
+                    </div>
+                    <div class="text">
+                        <h2 class="title">{service.name}</h2>
+                        <div class="desc"><Fragment set:html={service.description}/></div>
+                    </div>
                 </div>
-                <div class="text">
-                    <h2 class="title">{service.name}</h2>
-                    <div class="desc"><Fragment set:html={service.description}/></div>
-                </div>
-            </div>
-        ))}
-    </div>
+            ))}
+        </div>
+    </main>
 </Layout>
 <style define:vars={cssVars}>
-    main {
-        margin: auto;
-        width: 800px;
-        max-width: calc(100% - 2rem);
-    }
     .servicesContainer {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-items: center;
         padding-top: 4rem;
-        width: 800px;
+        width: 100%;
         margin: auto;
     }
     .servicesContainer .serviceItem {
