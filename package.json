@@ -11,6 +11,7 @@
     "test-pub": "astro preview --host"
   },
   "dependencies": {
-    "astro": "^5.15.7"
+    "astro": "^5.15.7",
+    "typescript": "^5.9.3"
   }
 }

@@ -42,12 +42,7 @@ import { cssVars } from "../../config/contentConfig";
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
-    }
-
-    .nav nav a {
-        text-decoration: none;
-        margin: 0 0.5em;
-        color: #fff;
+        height: 100%;
     }
 
     .nav .left a {
@@ -57,20 +52,25 @@ import { cssVars } from "../../config/contentConfig";
         margin-left: 0.5em;
     }
 
-    .nav .left a, .nav .right a {
+    .nav nav a {
         padding: .5em .8em;
         color: white;
         position: relative;
         text-decoration: none;
         font-size: 20px;
+        text-decoration: none;
+        margin-top: 0;
+        margin-bottom: 0;
+        height: 100%;
+        color: #fff;
+        box-sizing: border-box;
+        align-content: center;
     }
 
     @media only screen and (max-width: 600px) {
-        .nav .left a {
+        .nav nav a {
             font-size: 10px;
-        }
-        .nav .right a {
-            font-size: 10px
+            font-weight: 600;
         }
     }
 </style>
